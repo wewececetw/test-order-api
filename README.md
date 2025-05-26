@@ -60,6 +60,57 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
+## 安裝與初始化步驟
+
+### 1. 安裝 Composer
+```bash
+# 使用 Homebrew 安裝（macOS）
+brew install composer
+
+# 或使用安裝腳本
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/local/bin/composer
+```
+
+### 2. 建立新的 Laravel 專案
+```bash
+# 使用 Composer 建立新專案
+composer create-project laravel/laravel order-api
+
+# 進入專案目錄
+cd order-api
+```
+
+### 3. 環境設定
+```bash
+# 複製環境設定檔
+cp .env.example .env
+
+# 生成應用程式金鑰
+php artisan key:generate
+
+# 設定資料庫連線（在 .env 檔案中）
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=order_api
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 4. 啟動開發伺服器
+```bash
+# 啟動 Laravel 開發伺服器
+php artisan serve
+```
+
+### 5. 安裝專案依賴
+```bash
+composer install
+```
+
 ---
 
 # 訂單匯總與一致性檢查 API 專案說明
