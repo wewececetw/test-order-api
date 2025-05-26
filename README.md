@@ -134,4 +134,3 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ---
 
-如需進一步擴充資料來源，請將靜態資料改為資料庫 Model 並執行 migration。
