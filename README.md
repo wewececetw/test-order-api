@@ -74,16 +74,7 @@ php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-### 2. 建立新的 Laravel 專案
-```bash
-# 使用 Composer 建立新專案
-composer create-project laravel/laravel order-api
-
-# 進入專案目錄
-cd order-api
-```
-
-### 3. 環境設定
+### 2. 環境設定
 ```bash
 # 複製環境設定檔
 cp .env.example .env
@@ -100,13 +91,13 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 4. 啟動開發伺服器
+### 3. 啟動開發伺服器
 ```bash
 # 啟動 Laravel 開發伺服器
 php artisan serve
 ```
 
-### 5. 安裝專案依賴
+### 4. 安裝專案依賴
 ```bash
 composer install
 ```
